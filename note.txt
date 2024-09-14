@@ -1,0 +1,86 @@
+% CSS SECTION
+    - Type of CSS 
+    [
+        Inline => <tag style="css">
+        Internal => <style>css </style>
+        External  => <link href="style.css">
+    ]
+
+    - CSS Selecter
+        H1{
+            color: blue;
+        }
+    ? this css apply to all h1 elements
+
+    - class Selector
+    .red-heading{
+        color: red;
+    }
+
+    ! this css apply only this  .red-heading class 
+
+    - ID Selector
+    - #main{
+        color: blue;
+    }
+
+    - Atttribute Selecter
+    <p draggable="true">Drag me</p>
+    ? p[draggable]{
+        color:red
+    }
+
+    - Universal Selecter
+    
+    *{
+        color:red
+    }
+
+% Font Size Property
+    - 1px (1 pixel) => 1/96th  inch 0.26mm(milimiter)
+    - 1pt (1 point) => 1/72nd inch 0.35mm(milimiter)
+
+    -  1em 100% of parent
+    - 1rem 100% of root
+
+    example of 1em or 1rem
+    <html>
+    <head>
+    <meta rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+    <h1>Hello</h1>
+    <footer>
+    <h2>Hello</h2>
+    </body>
+    </html>
+
+    % explain
+        - 1em is 100% of parent element
+        - 1rem is 100% of root element
+        supose i set footer 20px and h2 2em mins 2em X 20px = 40px if footer is 80px  h2 is 2em mins 80X2 = 160px
+
+        in other hand if i had set this  h2 size of 2rem and change the size of footer from 20px to 80px, then does not affect this
+        it still remains the same size 
+        - it only if i change the root element <html>, then affect rem
+    
+% Font Weight properties
+
+        ! normal bold - keyswords
+        - lighter Bolder -  Relative to parent
+        x number  -  100 -  900
+
+
+% Font Family
+       h1{
+        font-Family: Helvetica, sans-serif // how your text look like
+       } 
+        
+
+
+
+
+
+
+
+
