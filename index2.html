@@ -25,12 +25,60 @@ footer{
 html{
     font-size: xx-large;
 }
+
+#outer-box{
+
+background-color: purple;
+}
+
+.box{
+   background: blue;   
+   padding: 10px;
+}
+
+.inner-box{
+    background-color: red;
+}
+ 
+
+.inner-box p{
+    color: yellow;
+    margin: 0;
+    padding: 0;
+}
+
+.white-text{
+    color:white;
+}
+
+
+
+
+
     </style>
 </head>
 <html lang="en">
     <body>
         <p id="pixel">1 pixel is 1/96 of an Inch</p>
         <p id="pixel">1 point is 1/72 of an Inch</p>
+
+        <div id="outer-box" class="box">
+            <div class="box">
+                <p>Yellow Text</p>
+                <div class="box inner-box">
+                    <p class="white-text">White Text</p>
+                </div>
+            </div>
+
+            <div class="box"></div>
+                <p>Yellow Text</p>
+                <div class="box inner-box">
+                    <p class="white-text">White Text</p>
+                </div>
+            </div>
+
+
+        </div>
 
         <footer>
             <p id="em">1em is 100% the size of the parent element</p>

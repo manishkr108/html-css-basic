@@ -1,0 +1,102 @@
+/* Flagpole container */
+.flagpole {
+    width: 700px;
+    height: 200px;
+    
+    margin-right: 10px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  /* Flag container */
+  .flag {
+    width: 300px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    animation: wave 2s ease-in-out infinite;
+    transform-origin: left; /* Makes the flag wave from the flagpole */
+  }
+  
+  /* Saffron stripe */
+  .saffron {
+    background-color: #FF9933;
+    height: 33.33%;
+    width: 100%;
+  }
+  
+  /* White stripe with Chakra */
+  .white {
+    background-color: white;
+    height: 33.33%;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Green stripe */
+  .green {
+    background-color: #138808;
+    height: 33.33%;
+    width: 100%;
+  }
+  
+  /* Ashoka Chakra styling */
+  .chakra {
+    width: 50px;
+    height: 50px;
+    background-color: #000080;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000080;
+    position: relative;
+    animation: spin 10s linear infinite; /* Chakra spinning */
+  }
+  
+  /* Chakra center circle */
+  .chakra::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+   
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2; /* Ensures it appears on top of the spokes */
+  }
+  
+  /* Chakra spokes using a rotating background gradient */
+  .chakra::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(
+      from 0deg,
+      white 0deg 3.6deg,
+      #000080 3.6deg 15deg
+    ); /* 24 spokes, 15 degrees between */
+    border-radius: 50%;
+    z-index: 1; /* Spokes layer */
+  }
+  
+  /* Chakra spin animation */
+  @keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  /* Waving animation for the flag */
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+  }
+  

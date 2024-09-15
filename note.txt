@@ -76,6 +76,100 @@
         font-Family: Helvetica, sans-serif // how your text look like
        } 
         
+% -----------Border---------------------------
+    x border: 10px solid black
+            - 10px is thickness of the border
+            - solid is type of border (solid mins without space border line)
+            - black is color of the border
+    x if you dont want order on top you can write (border-top:0px)
+            ! border has maximum 4 values
+            - 1.border-top
+            - 2.border-right
+            - 3.border-bottom
+            - 4.border-left
+            example border-width: 0px 10px 20px 10px
+% -----------------------Padding---------------
+    x padding: 10px 20px 30px 40px
+    - 10px is top padding
+    - 20px is right padding
+    - 30px is bottom padding
+    - 40px is left padding
+    ! if you simple write padding:20px it will give padding all 4 place (top,right,bottom,left 20px)
+    example = supose one paragraph is there and i am using border and when i use padding 20px it will not change chnage paragrapgh 
+    area it will give padding from border(push the border out side 20px)
+    - the padding simply add this padding or space between the element and the border
+% -----------------------Margin-------------------
+    in addition to the padding, there is also somthing know as a Margin and the Margin is actually the part thats out side of the border
+    x margin: 10px 20px 30px 40px
+    - 10px is top margin
+    - 20px is right margin
+    - 30px is bottom margin
+    - 40px is left margin
+    ! if you simple write margin:20px it will give margin all 4 place.
+
+% ---------------------CSS-------RULE-------------------------------
+
+    <ol>
+    <li>Selector</li>
+    <li style="color:red">Declaration</li>// li is red
+    <li>Block</li>
+    </ol>
+
+    supose i put css li{
+        color:blue;
+    }
+
+    - still 2nd li is red color because Priority hear is inner style
+    x if  i give two time color properties and diff color, it will give Priority lower  color
+    x css follow low down rule (top 3, middle 2, low 1) important is position hear
+   % example (Position)
+    li{
+        color:blue;
+        color:green;
+    }
+
+   % example 2 (Specificity)
+
+    - look below example these four rules we all target  this particular elementm
+     <list id="first-id" class="first-class" draggable>
+
+    4.li{color:blue}
+    3. .first-class{color:red}
+    2. li[draggable]{color:green}
+    1.-#first-id{color:orange} 
+
+     x hear applyed rule order (id,Atttribute,class,element)
+
+    % example 3 (Type)
+        - look below example these are there way to write style 
+
+       3. <link rel="stylesheet" href="./style.css">
+       2. <style></style>
+       1. <h1 style=" ">Hello</h1>
+x hear css follow the order( inner 1, Internal 2, External 3)
+
+% example (Importance)
+
+    color:red;
+    color:blue !important; // Priority first
+
+    - hear apply the important rule first blue properties working 
+
+% ------------------------Gruping CSS Selector--------------
+
+
+% -----------------------CSS Positioning---------------------
+
+position:static - this is default position
+position:relative - this is relative to parent element
+position:absolute - this is relative to nearest positioned ancestor
+position:fixed - this is relative to viewport
+position:sticky - this is relative to nearest positioned ancestor
+
+
+
+
+
 
 
 
