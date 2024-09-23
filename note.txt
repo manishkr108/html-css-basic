@@ -166,6 +166,31 @@ position:absolute - this is relative to nearest positioned ancestor
 position:fixed - this is relative to viewport
 position:sticky - this is relative to nearest positioned ancestor
 
+% -------------------------------Media Query Responsive Display-----------------------------------
+    @Media (max-width:600px){
+        // Css for scree below or equal to 600px wide 
+    }
+
+% --------------------------CSS Flax box------------------
+    
+
+  % ----  2. Css Grid -----
+
+    <div class="grid-first">
+    <div class="first  card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    </div>
+
+    ,grid-first{
+        display:grid;
+        grid-template-columns: 1fr 2fr;//fr like equat 1fr or 2fr are equal side columns
+        grid-template-rows: 100px 200px 200px;//
+        grid-gap: 10px;
+    }
+
 
 
 
